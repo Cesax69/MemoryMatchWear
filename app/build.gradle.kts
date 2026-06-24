@@ -29,13 +29,25 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    // useLibrary("wear-sdk")
     buildFeatures {
         compose = true
     }
 }
 
 dependencies {
+    // Compose for Wear OS
+    implementation("androidx.wear.compose:compose-material:1.3.1")
+    implementation("androidx.wear.compose:compose-foundation:1.3.1")
+    // Animaciones (flip de tarjetas)
+    implementation("androidx.compose.animation:animation:1.7.6")
+    // ViewModel + Coroutines
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
+    // DataStore (mejor tiempo)
+    implementation("androidx.datastore:datastore-preferences:1.1.1")
+    // Testing
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.1")
+    testImplementation("junit:junit:4.13.2")
+
     implementation(platform(libs.compose.bom))
     implementation(libs.activity.compose)
     implementation(libs.compose.foundation)
