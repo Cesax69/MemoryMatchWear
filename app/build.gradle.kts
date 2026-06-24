@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "mx.utng.memorymatch"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "mx.utng.memorymatch"
         minSdk = 30
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -29,7 +29,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    useLibrary("wear-sdk")
+    // useLibrary("wear-sdk")
     buildFeatures {
         compose = true
     }
